@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Sigmar&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@200;300;400;600;700;900&display=swap');
+
+.page {
+    background-color: var(--white);
+    width: 90%; /* Ajustable selon le besoin */
+    max-width: 1200px;
+    padding: 1em;
+    border-radius: 0;
+    border-top-left-radius: 16rem;
+    border-top-right-radius: 16rem;
+    box-shadow: 0 4px 8px rgba(228, 228, 228, 0.2);
+    margin-top: 2%;
+    margin-bottom: 2%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .page {
+        width: 95%; /* Augmente la largeur pour mieux remplir l'écran */
+        padding: 1.5em; /* Plus d'espace intérieur */
+        border-top-left-radius: 20%;
+        border-top-right-radius: 20%;
+    }
+}
+
+html, body {
+    font-family: 'Rubik';
+    text-align: center;
+    margin: auto;
+    background-color: var(--lightbrown);
+    min-height: 100vh;  /* Allow full-page height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+h1 {
+    font-family: 'Sigmar', serif;
+    margin: 0;
+    font-weight: 100;
+    font-size: 4rem;
+    margin-top: 5%;
+    margin-bottom: auto;
+    font-style: normal;
+    background: transparent;
+    text-shadow: 5px 5px 0px var(--lightpink), -5px -5px 0px var(--lightpink);
+    color: var(--darkbrown);
+}
+
+p {
+    font-size: 2em;
+    margin-top: 2rem;
+    width: 50%;
+    margin-bottom: auto;
+}
+
+div {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    border-radius: 30%;
+}
+
+#titre {
+    padding: 20px;
+}
+
+.conteneur {
+    display: flex;
+    margin: auto;
+    flex-wrap: wrap; /* Allow buttons to wrap on small screens */
+    justify-content: center;
+    padding: 2.5em;
+    max-width: 70%;
+    border-radius: 0;
+}
+
+
+
+a {
+    text-decoration: none;
+    font-weight: bold;
+    font-family: 'Rubik';
+    font-size: medium;
+    color: var(--secondbackcolor);
+}
+
+/****** animation *************/
+.fill:hover,
+.fill:focus {
+    box-shadow: inset 0 0 0 4em var(--darkbrown);
+}
+
+.offset {  
+    box-shadow: 0.3em 0.3em 0 0 var(--darkbrown), inset 0.3em 0.3em 0 0 var(--darkbrown);
+}
+
+.offset:hover,
+.offset:focus {
+    box-shadow: 0 0 0 0 var(--darkbrown), inset 5em 3.5em 0 0 var(--darkbrown);
+}
+
+button {
+    background: none;
+    margin: 30px;
+    padding: auto;
+    border: 1.5px solid;
+    width: 120px;
+    height: 80px;
+    font: inherit;
+    line-height: 1;
+    padding: 10px;
+    border-radius: 10%;
+    color: var(--darkbrown);
+    transition: 0.25s;
+}
+
+button:hover,
+button:focus {
+    border-color: var(--darkbrown);
+    color: var(--lightpink);
+}
+
+.form-control {
+    height: 4em;
+    width: 100%;
+    background: var(--white);
+    margin-bottom: 1rem;
+    border-radius: 3cap;
+    box-shadow: none;
+    font-size: medium;
+}
+
+.formButton {
+    border-color: var(--darkbeige);
+    color: var(--darkbrown);
+    font-family: 'titillium-web-semibold';
+    border-radius: 0px;
+    display: none;
+}
+
+.formButton:hover {
+    border-radius: 20px;
+    background: var(--white);
+    box-shadow: 15px 15px 30px var(--lightpink), -15px -15px 30px var(--white);
+    border-color: var(--lightpink);
+    color: var(--darkbrown);
+    background-color: var(--lightpink);
+}
+
+form {
+    width: 70%;
+    margin-inline: 0px;
+}
+
+input {
+    height: 20%;
+    width: 90%;
+    border-color: #fff;
+    background-color: #F1F3F9;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #000;
+    margin-top: 2rem;
+    margin-bottom: 0rem;
+
+}
+
+input::selection {
+    background-color: #BFDBF7; /* Couleur de fond de la sélection */
+    color: #000; /* Couleur du texte sélectionné */
+}
