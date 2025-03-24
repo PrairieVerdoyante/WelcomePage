@@ -4,7 +4,7 @@
 
 .page {
     background-color: var(--white);
-    width: 90%; /* Ajustable selon le besoin */
+    width: 88%; /* Ajustable selon le besoin */
     max-width: 1200px;
     padding: 1em;
     border-radius: 0;
@@ -107,12 +107,13 @@ a {
 
 button {
     background: none;
-    margin: 30px;
+    margin: 0.7em;
     padding: auto;
     border: 1.5px solid;
     width: 120px;
     height: 80px;
     font: inherit;
+    font-size: large;
     line-height: 1;
     padding: 10px;
     border-radius: 10%;
@@ -173,4 +174,99 @@ input {
 input::selection {
     background-color: #BFDBF7; /* Couleur de fond de la sélection */
     color: #000; /* Couleur du texte sélectionné */
+}
+
+/*responsive*/
+
+@media screen and (max-width: 1000px) {
+    html, body {
+        margin: 0; /* Remove default margins */
+        padding: 0; /* Remove default padding */
+        width: 100%; /* Ensure the body and html take up the full width of the viewport */
+    }
+
+    .page {
+        width: 100%; /* Make the page take up the full width of the viewport */
+        max-width: 800px; /* Optional: Set a maximum width for better layout */
+        padding: 0; /* Remove extra padding */
+        margin: 0 auto; /* Center the page horizontally */
+        box-sizing: border-box; /* Include padding and borders in the width calculation */
+    }
+
+    .conteneur {
+        max-width: 70%; /* Ensure the container does not exceed the viewport width */
+        
+        flex-wrap: wrap; /* Allow child elements to wrap */
+    }
+    
+}
+
+/* Responsive Design for smaller screens */
+@media screen and (max-width: 768px) {
+    .page {
+        width: 100%; /* Adjust width for smaller screens */
+        max-width: 768px;
+        padding: 1.5em; /* Add more padding */
+        border-top-left-radius: 0;
+        margin: auto;
+        border-top-right-radius: 0;
+    }
+
+    p {
+        font-size: 1.5em; /* Reduce font size for better readability */
+        width: 90%; /* Adjust width to fit smaller screens */
+    }
+
+    div {
+        flex-direction: column; /* Stack elements vertically */
+        border-radius: 10%; /* Adjust border radius */
+    }
+
+    #titre {
+        padding: 10px; /* Reduce padding */
+    }
+
+    .conteneur {
+        flex-wrap: wrap; /* Allow wrapping for child elements */
+        justify-content: center; /* Center elements */
+        padding: 1.5em; /* Adjust padding */
+        max-width: 100%; /* Allow full width */
+    }
+
+    button {
+        width: 100px; /* Reduce button size */
+        height: 60px;
+        font-size: medium; /* Adjust font size */
+        border-radius: 15%; /* Adjust border radius */
+    }
+
+    form {
+        width: 90%; /* Adjust form width */
+    }
+
+    input {
+        width: 100%; /* Make input fields full width */
+        margin-top: 1rem; /* Adjust spacing */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    h1 {
+        font-size: 2.5rem; /* Reduce heading size */
+        margin-top: 2%; /* Adjust margin */
+    }
+
+    p {
+        font-size: 1.2em; /* Further reduce font size */
+    }
+
+    button {
+        width: 80px; /* Smaller buttons */
+        height: 50px;
+        font-size: small;
+    }
+
+    .conteneur {
+        padding: 1em; /* Reduce padding */
+    }
 }

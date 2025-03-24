@@ -50,19 +50,18 @@ const moveTouch = (event) => {
 }
 .slider {
   display: inline-block;
-
 }
 .slide {
   display: flex;
   gap: 10px;
   padding: 10px;
-  margin: 30px;
-  margin-left: 60%;
+  margin: 25px;
+  margin-left: 50%;
+  margin-top: 1rem;
 
 }
 .button-container {
   display: inline-flex;
-  align-items: left;
   align-items: center;
 }
 button {

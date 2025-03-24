@@ -1,7 +1,6 @@
 <script setup>
 import ButtonsSliderComponent from './components/ButtonsSliderComponent.vue';
-import { chooseWelcome } from './utils/mainpage.js';
-
+import { chooseWelcome, currentLanguage } from './utils/mainpage.js';
 
 </script>
 
@@ -19,7 +18,7 @@ import { chooseWelcome } from './utils/mainpage.js';
 -->
   <body>
     <div class="page">
-        <div id="titre">
+        <div id="titre" :data-language="currentLanguage">
             <h1>{{chooseWelcome()}}</h1>
         </div>
         <div id="conteneur">
@@ -72,6 +71,14 @@ header {
 .logo {
   display: block;
   margin: 0 auto 2rem;
+}
+
+/*Animation hover for hover content */
+#titre:hover::after {
+  content: attr(data-language);
+  position-anchor: center;
+  position: absolute;
+
 }
 
 nav {

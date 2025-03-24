@@ -22,12 +22,17 @@ var languages = {
     japonais: 'いらっしゃいませ'
   };
 
+export var currentLanguage = ref('français');
+
+
 export function chooseWelcome()
 {
     const keys = Object.keys(languages); // Récupère les langues disponibles
     const randomIndex = Math.floor(Math.random() * keys.length); // Choisit un index aléatoire
+    currentLanguage.value = keys[randomIndex]; // Récupère la langue correspondante
     return languages[keys[randomIndex]] || languages.french;
 }
+
 
 const colors = [
     //'rgba(107, 86, 77, 0.5)',  // darkbrown
